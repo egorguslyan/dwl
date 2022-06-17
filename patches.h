@@ -1,0 +1,11 @@
+#define ALWAYS_CENTER 0
+#define ATTACH_ABOVE 0  /* Can't find oldfocus */
+#define ATTACH_BOTTOM 0
+#define CURSOR_WARP 0
+#define FALLBACK 0
+#define FOCUSMON_POINTER 0
+#define MASTER_ON_RIGHT 0
+#define MONITOR_CONFIG_AUTO_PLACEMENT 0
+#define PERTAG 0
+#define RESTORE_TILING 0
+#define UNCLUTTER 0

@@ -15,13 +15,17 @@ clean:
 	rm -f dwl *.o *-protocol.h *-protocol.c
 
 install: dwl
+	strip dwl
 	install -Dm755 dwl $(DESTDIR)$(PREFIX)/bin/dwl
 	install -Dm644 dwl.1 $(DESTDIR)$(MANDIR)/man1/dwl.1
+	install -Dm644 dwl.desktop $(DESKTOP)/dwl.desktop
 
 uninstall:
 	rm -f $(DESTDIR)$(PREFIX)/bin/dwl $(DESTDIR)$(MANDIR)/man1/dwl.1
+	rm -f $(DESKTOP)/dwl.desktop
 
 .PHONY: all clean install uninstall
+.DEFAULT_GOAL=dwl
 
 # wayland-scanner is a tool which generates C headers and rigging for Wayland
 # protocols, which are specified in XML. wlroots requires you to rig these up
